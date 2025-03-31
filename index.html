@@ -12,6 +12,8 @@
             direction: rtl;
             text-align: right;
             background-color: #f5f5f5;
+            max-width: 100%;
+            overflow-x: hidden;
         }
         .container {
             max-width: 1000px;
@@ -42,7 +44,27 @@
             font-size: 18px;
             color: #555;
         }
+        .btn {
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
         
+        .buy-button{
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: white;
+            background: #1E90FF;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+            border: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .buy-button:hover{
+            background: #007BFF;
+            transform: scale(1.05);
+        }
         .content {
             max-width: 1000px;
             
@@ -104,14 +126,59 @@
         }
 
         footer {
-            background-color: #222;
+            background-color: #2C3E50;
             color: white;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
             font-size: 16px;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
         }
-
+        .subscribe-container {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 5px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+        .subscribe-container input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            outline: none;
+            flex: 1;
+        }
+        .subscribe-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .subscribe-container button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .subscribe-container button:hover {
+            background: #1d4ed8;
+        }
+        .hq{
+            text-align: left;
+        }
+        
+        .icon {
+            padding: 12px;
+            color: white;
+        }
         /* تحسين التناسق في الشاشات الصغيرة */
         @media (max-width: 768px) {
             .row {
@@ -137,6 +204,14 @@
         <section class="hero">
             <h1>حقق دخلًا من الذكاء الاصطناعي</h1>
             <p>دليل شامل يعلمك كيفية استغلال الذكاء الاصطناعي لتحقيق دخل إضافي بسهولة وذكاء.</p>
+            <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="wwassimmsl28@gmail.com">
+                <input type="hidden" name="item_name" value="كتاب كيف تستخد الذكاءالاصطناعي لكسب المال ">
+                <input type="hidden" name="amount" value="5.00"> !-- ثمن المنتج --
+                <input type="hidden" name="currency_code" value="USD"> !-- العملة --
+                <input type="submit" value="اشتري الآن" class="buy-button">
+            </form> -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_s-xclick" />
                 <input type="hidden" name="hosted_button_id" value="T5G296AEPT4Z8" />
@@ -150,18 +225,26 @@
         </div>
         <div class="row">
             <div class="hero-text">
-                <h2>لماذا هذا الكتاب؟</h2>
-                <p>اكتشف استراتيجيات مربحة باستخدام الذكاء الاصطناعي لزيادة دخلك بطرق ذكية وعصرية.</p>
+                <h2>لماذا يجب ان تمتلك هذا الكتاب؟</h2>
+                <p>إذا كنت تبحث عن طرق حقيقية لاستغلال الذكاء الاصطناعي لكسب المال، فهذا الكتاب هو دليلك الشامل.</p>
+                <ul>
+                    <li>✔️ لا تحتاج خبرة تقنية – كل شيء مشروح بأسلوب بسيط وسلس.</li>
+                    <li>✔️ استراتيجيات عملية – لا نظريات فارغة، بل طرق حقيقية يمكنك البدء بها اليوم.</li>
+                    <li>✔️ نتائج مجربة – أفكار مبنية على تجارب ناجحة في السوق.</li>
+                </ul>
+                <p>هذا ليس مجرد كتاب، بل خريطة طريق لتحويل الذكاء الاصطناعي إلى مصدر دخل!</p>
             </div>
         </div>
         <div class="row">
             <div class="text">
-                <h2>ماذا ستتعلم؟</h2>
+                <h2>ما الذي ستتعلمه خطوة بخطوة؟</h2>
                 <ul>
-                    <li>أهم أدوات الذكاء الاصطناعي لتحقيق دخل سلبي</li>
-                    <li>استراتيجيات عملية لتطبيق الذكاء الاصطناعي في الأعمال</li>
-                    <li>نصائح للاستفادة من أحدث التطورات التقنية</li>
+                    <li>📌 كيف تستغل أدوات الذكاء الاصطناعي لإنجاز أعمال مربحة بسرعة.</li>
+                    <li>📌 أفكار مشاريع جاهزة للعمل دون الحاجة إلى رأس مال كبير.</li>
+                    <li>📌 كيف تجعل الذكاء الاصطناعي يعمل لصالحك ويوفر عليك الوقت والجهد.</li>
+                    <li>📌 استراتيجيات تسويق ذكية لبيع خدماتك أو منتجاتك باستخدام الذكاء الاصطناعي.</li>
                 </ul>
+                <p>هذا الكتاب ليس فقط للقراءة، بل للتطبيق الفعلي وتحقيق النتائج!</p>
             </div>
             
         </div>
@@ -172,17 +255,31 @@
             <img src="9440644432C335C1F798C891E70A4D4D.png" alt="مثال آخر">
         </div>
         <div class="row reverse">
-            
             <div class="text">
-                <h2>كيف تستفيد من الكتاب؟</h2>
-                <p>بمجرد قراءتك لهذا الكتاب، ستتمكن من تطبيق استراتيجيات فعالة والاستفادة من الذكاء الاصطناعي في مشاريعك الشخصية والمهنية.</p>
+                <h2>كيف تطبق ما في الكتاب لتحقيق نتائج فعلية؟</h2>
+                <ul>
+                    <li>✅ خطوات واضحة – ابدأ اليوم حتى لو لم تكن لديك أي خبرة مسبقة.</li>
+                    <li>✅ أدوات مجانية ومدفوعة – تعرف على أفضل الأدوات التي تساعدك على النجاح بسرعة.</li>
+                    <li>✅ نصائح من محترفين – تجارب حقيقية ونصائح عملية لتجنب الأخطاء الشائعة.</li>
+                    <li>✅ طرق تحقيق دخل مستدام – لا تعتمد على الصدف، بل على استراتيجيات مجربة.</li>
+                </ul>
+            <p>ابدأ الآن، ولا تفوت فرصة الانضمام إلى الجيل الجديد من رواد الذكاء الاصطناعي!</p>
             </div>
         </div>
         
     </section></section>
     
     <footer>
-        <p>© 2025 جميع الحقوق محفوظة</p>
+
+        <form action="https://formspree.io/f/mblgapoq" method="POST" class="subscribe-container">
+            <span class="icon">📩</span>
+            <input type="email" name="email" placeholder="أدخل إيميلك" required>
+            <button type="submit">إشترك</button>
+        </form>
+        <div class="hq"><p>© 2025 جميع الحقوق محفوظة</p></div>
+        
+
+        
     </footer>
 </body>
 </html>
